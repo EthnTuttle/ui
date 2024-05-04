@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Flex, Box, Heading, Skeleton } from '@chakra-ui/react';
+import { Flex, Box, Heading, Skeleton, Input, Button } from '@chakra-ui/react';
 import {
   ClientConfig,
   ModulesConfigResponse,
@@ -67,6 +67,25 @@ export const FederationAdmin: React.FC = () => {
             )}
           </Heading>
           <InviteCode inviteCode={inviteCode} />
+        </Box>
+        <Box>
+          <Input
+            placeholder={t('set-config.meta-fields-key')}
+            value={key}
+            disabled={isDerived}
+            onChange={(ev) =>
+              handleChangeMetaField(ev.target.value, value, idx)
+            }
+          />
+          <Input
+            placeholder={t('set-config.meta-fields-key')}
+            value={key}
+            disabled={isDerived}
+            onChange={(ev) =>
+              handleChangeMetaField(ev.target.value, value, idx)
+            }
+          />
+          <Button />
         </Box>
         <Flex
           gap={6}

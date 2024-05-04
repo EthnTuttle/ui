@@ -292,7 +292,7 @@ export class GuardianApi {
     return this.call_any_method(method, params);
   };
 
-  private call_any_method = async <T>(
+  public call_any_method = async <T>(
     method: string,
     params: unknown = null
   ): Promise<T> => {
